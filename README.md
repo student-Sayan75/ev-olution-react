@@ -157,8 +157,6 @@ useEffect(() => {
   const interval = setInterval(() => {
     setHeroCount((prev) => (prev === 2 ? 0 : prev + 1));
   }, 3000);
-
-  return () => clearInterval(interval);
 }, []);
 ```
 
@@ -181,54 +179,6 @@ Wait another 3 seconds
       ↓
 Repeat
 ```
-
----
-
-## 🧹 Why `clearInterval()` Is Used
-
-The following line is the cleanup function:
-
-```jsx
-return () => clearInterval(interval);
-```
-
-`setInterval()` creates a timer that continues running repeatedly.
-
-When the React component is removed from the page, the timer should also be stopped.
-
-Therefore:
-
-```jsx
-setInterval();
-```
-
-starts the timer, while:
-
-```jsx
-clearInterval();
-```
-
-stops the timer.
-
-The cleanup function prevents unnecessary timers from continuing to run after the component has been unmounted.
-
-### Simple Example
-
-```text
-setInterval()
-     ↓
-Start timer
-     ↓
-Run every 3 seconds
-     ↓
-Component removed
-     ↓
-clearInterval()
-     ↓
-Timer stopped
-```
-
-This is an important React practice when working with timers, event listeners, subscriptions, or other external resources.
 
 ---
 
@@ -426,7 +376,6 @@ This project was created as a practical React project to understand:
 - Conditional rendering
 - Component communication
 - Timers with `setInterval`
-- Cleanup with `clearInterval`
 - CSS animations
 - Background images
 - Background videos
