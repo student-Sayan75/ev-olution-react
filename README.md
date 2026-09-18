@@ -10,8 +10,8 @@ The project focuses on creating a visually engaging EV website using React compo
 
 ### The Landing-Page
 
-![EV-olution Home Page](../screenshots/homePage.png)
-![EV-olution Home Page video](../screenshots/homePageVideo.png)
+![EV-olution Home Page](./screenshots/homePage.png)
+![EV-olution Home Page video](./screenshots/homePageVideo.png)
 
 ---
 
@@ -51,7 +51,8 @@ EV-WEBSITE/
 ├── public/
 │
 ├── screenshots/
-│   └── home.png
+│   └── homePage.png
+│   └── homePageVideo.png
 │
 ├── src/
 │   │
